@@ -26,18 +26,17 @@ public class TestBase{
 		WebDriverManager.chromedriver().setup();
 		Driver=new ChromeDriver();
 		}
-	/*else if(browser.equalsIgnoreCase("Firefox"))
+	else if(browser.equalsIgnoreCase("Firefox"))
 		{
 		WebDriverManager.firefoxdriver().setup();
 		Driver=new FirefoxDriver();
-		}*/
+		}
 //		else if(browser.equalsIgnoreCase("edge")) {
 //			WebDriverManager.edgedriver().setup();
 //			Driver=new EdgeDriver();
 //			  }
 		page =new LearnPage(Driver);
 		Driver.manage().window().maximize();
-		Thread.sleep(3000);
 		Driver.get(url);
 //		JavascriptExecutor js=((JavascriptExecutor)Driver);
 //		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
